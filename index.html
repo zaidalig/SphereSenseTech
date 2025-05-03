@@ -10,9 +10,9 @@
   <link rel="icon" type="image/png" href="images/logo.jpg" />
   <script>
     document.addEventListener("DOMContentLoaded", async () => {
-      const nav = await fetch("components/navbar.html").then(r => r.text());
+      // const nav = await fetch("components/navbar.html").then(r => r.text());
       const footer = await fetch("components/footer.html").then(r => r.text());
-      document.getElementById("navbar").innerHTML = nav;
+      // document.getElementById("navbar").innerHTML = nav;
       document.getElementById("footer").innerHTML = footer;
     });
   </script>
@@ -51,8 +51,28 @@
 <body>
 
   <!-- Navbar -->
-  <div id="navbar"></div>
-
+<nav class="navbar navbar-expand-lg bg-success navbar-dark shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="../index.html">
+      <img src="../images/logo.jpg" alt="SphereSenseTech Logo" width="50" height="50" class="rounded-circle"
+        style="object-fit: cover;">
+      SphereSenseTech
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="../pages/smart-irrigation.html">Smart Irrigation</a></li>
+        <li class="nav-item"><a class="nav-link" href="../pages/soil-analysis.html">Soil Analysis</a></li>
+        <li class="nav-item"><a class="nav-link" href="../pages/crop-monitoring.html">Crop Monitoring</a></li>
+        <li class="nav-item"><a class="nav-link" href="../pages/climate-tracking.html">Climate Tracking</a></li>
+        <li class="nav-item"><a class="nav-link" href="../pages/faq.html">FAQs</a></li>
+        <li class="nav-item"><a class="nav-link" href="../pages/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
   <!-- Hero -->
   <header class="bg-light text-center py-5" data-aos="fade-down">
     <div class="container">
