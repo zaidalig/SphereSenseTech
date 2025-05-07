@@ -1,0 +1,9 @@
+ :root {
+     --primary-color: #4CAF50;
+     --secondary-color: #2E7D32;
+     --tech-blue: #007BFF;
+ }
+
+  .brand-highlight {
+      color: var(--tech-blue);
+  }

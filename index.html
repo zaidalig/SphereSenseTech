@@ -10,9 +10,7 @@
   <link rel="icon" type="image/png" href="images/logo.jpg" />
   <script>
     document.addEventListener("DOMContentLoaded", async () => {
-      // const nav = await fetch("components/navbar.html").then(r => r.text());
       const footer = await fetch("components/footer.html").then(r => r.text());
-      // document.getElementById("navbar").innerHTML = nav;
       document.getElementById("footer").innerHTML = footer;
     });
   </script>
@@ -20,14 +18,24 @@
     :root {
       --primary-color: #4CAF50;
       --secondary-color: #2E7D32;
+      --tech-blue: #007BFF;
     }
 
     body {
       color: var(--secondary-color);
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       color: var(--primary-color);
+    }
+
+    .brand-highlight {
+      color: var(--tech-blue);
     }
 
     .btn-primary {
@@ -38,6 +46,12 @@
     .btn-primary:hover {
       background-color: var(--secondary-color);
       border-color: var(--secondary-color);
+    }
+    
+
+    .card-img-top {
+      height: 250px;
+      object-fit: cover;
     }
 
     footer {
@@ -51,32 +65,34 @@
 <body>
 
   <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-success navbar-dark shadow-sm">
-  <div class="container">
-    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="../index.html">
-      <img src="../images/logo.jpg" alt="SphereSenseTech Logo" width="50" height="50" class="rounded-circle"
-        style="object-fit: cover;">
-      SphereSenseTech
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="../pages/smart-irrigation.html">Smart Irrigation</a></li>
-        <li class="nav-item"><a class="nav-link" href="../pages/soil-analysis.html">Soil Analysis</a></li>
-        <li class="nav-item"><a class="nav-link" href="../pages/crop-monitoring.html">Crop Monitoring</a></li>
-        <li class="nav-item"><a class="nav-link" href="../pages/climate-tracking.html">Climate Tracking</a></li>
-        <li class="nav-item"><a class="nav-link" href="../pages/faq.html">FAQs</a></li>
-        <li class="nav-item"><a class="nav-link" href="../pages/contact.html">Contact</a></li>
-      </ul>
+  <nav class="navbar navbar-expand-lg bg-success navbar-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+        <img src="images/logo.jpg" alt="SphereSenseTech Logo" width="50" height="50" class="rounded-circle"
+          style="object-fit: cover;">
+        <span>SphereSense<span class="brand-highlight">Tech</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="pages/smart-irrigation.html">Smart Irrigation</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/soil-analysis.html">Soil Analysis</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/crop-monitoring.html">Crop Monitoring</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/climate-tracking.html">Climate Tracking</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/team.html">Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/faq.html">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+
   <!-- Hero -->
   <header class="bg-light text-center py-5" data-aos="fade-down">
     <div class="container">
-      <h1 class="display-4 fw-bold">Welcome to SphereSenseTech</h1>
+      <h1 class="display-4 fw-bold">Welcome to SphereSense<span class="brand-highlight">Tech</span></h1>
       <p class="lead mb-4">Smart Solutions for Smarter Farming</p>
       <a href="#products" class="btn btn-primary btn-lg">Explore Solutions</a>
     </div>
@@ -103,7 +119,7 @@
           <img src="images/soil-analysis.jpg" class="card-img-top" alt="Soil Analysis">
           <div class="card-body">
             <h5 class="card-title">Soil Analysis</h5>
-            <p class="card-text">Get detailed soil health reports.</p>
+            <p class="card-text">Get detailed soil health reports with smart sensors.</p>
             <a href="pages/soil-analysis.html" class="btn btn-primary btn-sm">Learn More</a>
           </div>
         </div>
@@ -142,4 +158,5 @@
   <script>AOS.init({ duration: 1000, once: true, offset: 100 });</script>
 
 </body>
+
 </html>
