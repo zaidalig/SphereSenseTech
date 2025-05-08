@@ -4,13 +4,27 @@
      --tech-blue: skyblue;
  }
 
- /* .logo {
-     transition: transform 0.3s ease;
- }
+.logo {
+    transition: all 0.4s ease;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
 
- .logo.scaled {
-     transform: scale(1.5);
- } */
+.logo.scaled {
+    position: fixed;
+    top: 40%;
+    left: 17%;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1300;
+    object-fit: contain !important;
+    /* Ensure full image is visible */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
 
  .brand-highlight {
      color: var(--tech-blue);
