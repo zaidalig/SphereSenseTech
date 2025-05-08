@@ -4,13 +4,13 @@
      --tech-blue: skyblue;
  }
 
- .logo {
+ /* .logo {
      transition: transform 0.3s ease;
  }
 
  .logo.scaled {
      transform: scale(1.5);
- }
+ } */
 
  .brand-highlight {
      color: var(--tech-blue);
